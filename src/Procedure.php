@@ -86,7 +86,7 @@ abstract class Procedure implements ProcedureInterface, StepInterface
          */
         foreach($data as $index => $item)
         {
-            $data[$index] = $this->executeSteps($item);
+            $data[$index] = $this->process($item);
         }
 
         /**
