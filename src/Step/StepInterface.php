@@ -8,6 +8,13 @@ use Urb\Procedure\Data\DataInterface;
 interface StepInterface
 {
     /**
+     * Return Step Name
+     *
+     * @return string
+     */
+    public function getName();
+
+    /**
      * Process the data passed
      *
      * @param mixed &$data
