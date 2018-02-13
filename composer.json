@@ -1,0 +1,53 @@
+{
+    "name": "urb/procedure",
+    "type": "library",
+    "description": "Procedure is a pipeline library designed to easily process data using a set of procedures",
+    "keywords": ["UnderRatedBrilliance","Procedure","import","export","processing","data","csv"],
+    "homepage": "https://github.com/UnderRatedBrilliance/Procedure",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "George Barba",
+            "email": "george@underratedbrilliance.com",
+            "homepage": "http://underratedbrilliance.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "george@underratedbrilliance.com",
+        "issues": "https://github.com/UnderRatedBrilliance/Procedure/issues",
+        "source": "https://github.com/UnderRatedBrilliance/Procedure"
+
+    },
+    "require": {
+        "php": "~5.5|~7.0",
+        "psr/log": "^1.0",
+        "symfony/property-access": "^3.1"
+    },
+    "suggest": {
+        "league/csv": "If you want to use CsvReader",
+        "symfony/validator": "to use the ValidationFilter"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Urb\\Procedure\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Urb\\Procedure\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "phpcbf --standard=psr2 src/"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
