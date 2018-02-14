@@ -137,7 +137,7 @@ abstract class Procedure implements ProcedureInterface, StepInterface
      * @param array $context
      * @throws Exception
      */
-    protected function handleException(DataInterface $data, Exception $exception, array $context = [])
+    protected function handleException($data, Exception $exception, array $context = [])
     {
         //Stop execution and throw error if stopOnFailure === true
         if($this->stopOnFailure)
