@@ -25,12 +25,12 @@ abstract class Procedure implements ProcedureInterface, StepInterface
     /**
      * @var bool
      */
-    private $stopOnFailure = false;
+    protected $stopOnFailure = false;
 
     /**
      * @var \Urb\Procedure\Step\Steps
      */
-    private $steps;
+    protected $steps;
 
     /**
      * @param Steps $steps

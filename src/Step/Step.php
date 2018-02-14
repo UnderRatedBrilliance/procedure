@@ -4,6 +4,7 @@ namespace Urb\Procedure\Step;
 
 
 use Exception;
+use Urb\Procedure\Exception\StepException;
 
 abstract class Step implements StepInterface
 {
@@ -31,8 +32,8 @@ abstract class Step implements StepInterface
      * @param $msg
      * @return Exception
      */
-    protected function getException($msg)
+    protected function getException($msg,$context)
     {
-        return new Exception($this->getName().': '.$msg);
+        return new StepException($this->getName().': '.$msg,$context);
     }
 }
