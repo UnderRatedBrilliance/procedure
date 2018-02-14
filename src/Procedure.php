@@ -117,7 +117,7 @@ abstract class Procedure implements ProcedureInterface, StepInterface
                 /**
                  * Process Data through step Exceptions will exit foreach
                  */
-                $data = $step->process($data);
+                $step->process($data);
             }
 
 
@@ -146,10 +146,10 @@ abstract class Procedure implements ProcedureInterface, StepInterface
         }
 
         //Add Exception to storage if implements DataExceptionInterface
-        /*if($data instanceof DataExceptionInterface)
+        if($data instanceof DataExceptionInterface)
         {
-            $data->addExceptions($exception,$context);
-        }*/
+            $data->addExceptions($exception);
+        }
 
         //Add Exception to storage if implements DataLoggerInterface
         if($data instanceof DataLoggerInterface)
@@ -193,8 +193,8 @@ abstract class Procedure implements ProcedureInterface, StepInterface
     protected function initResult(ResultAwareInterface &$data)
     {
         $data->setResult($data->getResult()
-                              ->setName($this->getName())
-                              ->setStartTime((new DateTime))
+            ->setName($this->getName())
+            ->setStartTime((new DateTime))
         );
     }
 
@@ -204,7 +204,7 @@ abstract class Procedure implements ProcedureInterface, StepInterface
     protected function finishResult(ResultAwareInterface &$data)
     {
         $data->setResult($data->getResult()
-                              ->setEndTime((new DateTime))
+            ->setEndTime((new DateTime))
         );
     }
 
