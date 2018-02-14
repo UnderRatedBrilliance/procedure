@@ -10,10 +10,9 @@ interface DataExceptionInterface
      * add Exception to ObjectStorage
      *
      * @param Exception $exception
-     * @param $data
      * @return $this
      */
-    public function addExceptions(Exception $exception, $data);
+    public function addExceptions(Exception $exception);
 
     /**
      * Returns an object storage of all exceptions captured
